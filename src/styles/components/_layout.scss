@@ -1,0 +1,47 @@
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.calculator-keypad {
+  display: flex;
+}
+
+.calculator-keypad button {
+  color: $off-white;
+}
+
+.keys-left {
+  display: flex;
+  flex: 4;
+  flex-wrap: wrap-reverse;
+  background: $light;
+  * {
+    flex-grow: 1;
+    flex-basis: 30%;
+  }
+}
+
+.keys-right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: $dark;
+  * {
+    flex: 1;
+  }
+}
