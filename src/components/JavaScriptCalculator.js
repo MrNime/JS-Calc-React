@@ -61,12 +61,14 @@ export default class JavaScriptCalculator extends React.Component {
     };
 
     this.setState((prevState) => {
-      const { displayValue, operator, value } = prevState;
-      const nextValue = parseFloat(displayValue);
+      const {
+        displayValue, operator, value, waitingForOperand,
+      } = prevState;
+      const nextValue = parseFloat(displayValue, 10);
       let updaterObj;
       if (value === null) {
         updaterObj = { value: nextValue };
-      } else if (operator) {
+      } else if (operator && !waitingForOperand) {
         const currentValue = value || 0;
         const computedValue = operations[operator](currentValue, nextValue);
         updaterObj = {
