@@ -7,8 +7,7 @@
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
-    "start": "node server/server.js",
-    "heroku-postbuild": "npm run build:prod"
+    "start": "node server/server.js"
   },
   "author": "Nicky Meuleman",
   "license": "MIT",
@@ -38,9 +37,7 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-modal": "^3.1.0",
-    "react-point": "^3.0.1",
     "sass-loader": "^6.0.6",
-    "validator": "^9.1.0",
     "webpack": "^3.8.1"
   }
 }
